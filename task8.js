@@ -6,7 +6,7 @@ var rl = readline.createInterface({
 });
 
 rl.question("Введите дату в формате ДД.ММ.ГГГГ :", function (date) {
-    date = new Date(date)s;
+    date = new Date(date);
     let days = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
 
     console.log(days[date.getDay()]);
