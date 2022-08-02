@@ -7,13 +7,11 @@ let checkEmail = (email) => {
     let emailReg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     return emailReg.exec(email) != null;
 }
-var dateReg = /^\d{2}([./-])\d{2}\1\d{4}$/
 
 console.log(checkDate("22-03-1981"))
 console.log(checkDate("22.03-1981"))
 console.log(checkDate("22.03.1981"))
 
-var emailReg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
 console.log(checkEmail("test@test"))
 console.log(checkEmail("test@test.ru"))
