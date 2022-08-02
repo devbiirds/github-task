@@ -1,12 +1,10 @@
 var readline = require('readline');
 
-var a = 5;
-var b = 6;
-console.log(a + b);
+let sum = (a, b) => a + b
+let sumStrLength = (str1, str2) => str1.length + str2.length
 
-var str1 = 'test'
-var str2 = 'test2';
-console.log(str1.length + str2.length);
+console.log(sum(5, 6));
+console.log(sumStrLength('test', 'test2'));
 
 
 var rl = readline.createInterface({
@@ -14,10 +12,12 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question("Введите трехзначное число: ", function(number) {
-    console.log(number.toString().split('').reduce(function(a, b) {
-                 return +a + +b;
-             })
-        )
+let sumOfNumbers = (num) => num.toString().split('').reduce(function (a, b) {
+  return +a + +b;
+})
+
+
+rl.question("Введите трехзначное число: ", function (number) {
+  console.log(sumOfNumbers(number))
   rl.close();
 });
