@@ -1,11 +1,19 @@
-var resultSum = 0;
-for(let i = 50; i < 100;i++){
-    resultSum = resultSum + i;
+
+
+let sumValuesArray = (start, end) => {
+    let resultSum = 0;
+    for (let i = start; i < end; i++) {
+        resultSum = resultSum + i;
+    }
+    return resultSum;
 }
 
-console.log(resultSum);
+console.log(sumValuesArray(50,100))
 
-
-for(let i = 1; i < 10;i++){
-    console.log(7 * i)
+let showTableMultiplication = (num) =>{
+    for (let i = 1; i < 10; i++) {
+        console.log(num * i)
+    }
 }
+
+showTableMultiplication(7)

@@ -14,7 +14,7 @@ rl.question("Введите возраст: ", function (number) {
     let admin = {}
     Object.assign(admin, user)
     admin['role'] = 'admin';
-    
+
     console.log(user);
     console.log(admin)
     rl.close();

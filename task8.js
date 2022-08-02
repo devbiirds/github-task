@@ -10,12 +10,11 @@ rl.question("Введите дату в формате ДД.ММ.ГГГГ :", fu
     let days = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
 
     console.log(days[date.getDay()]);
+    console.log(getMinutesFromStartDay(new Date()))
     rl.close();
 });
 
-
-var date = new Date();
-var now = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0);
-var result = Math.floor((date.getTime() - now.getTime()) / 1000 / 60);
-
-console.log(result)
+let getMinutesFromStartDay = (date) => {
+    let now = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0);
+    return Math.floor((date.getTime() - now.getTime()) / 1000 / 60);
+}

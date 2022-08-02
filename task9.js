@@ -7,6 +7,8 @@ function checkTriangle(a, b, c) {
 console.log(checkTriangle(10, 24, 26))
 console.log(checkTriangle(11, 24, 26))
 
+let squareCircle = (radius) => 2 * Math.PI * radius
+let lengthCircle = (radius) => Math.pow(radius, 2) + Math.PI
 
 var rl = readline.createInterface({
     input: process.stdin,
@@ -14,7 +16,8 @@ var rl = readline.createInterface({
 });
 
 rl.question("Введите R :", function (radius) {
-    console.log('Площадь круга = ' + 2 * Math.PI * radius)
-    console.log('Длина окружности = ' + Math.pow(radius, 2) + Math.PI);
+    console.log('Площадь круга = ' + squareCircle(radius))
+    console.log('Длина окружности = ' + lengthCircle(radius));
     rl.close();
 });
+
